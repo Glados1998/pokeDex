@@ -11,7 +11,7 @@ const Pokedex = () => {
 
     useEffect ( () => {
         setIsLoading ( true );
-        Axios.get ( 'https://pokeapi.co/api/v2/pokemon/?limit=2000' )
+        Axios.get ( 'https://pokeapi.co/api/v2/pokemon/?limit=40' )
             .then ( response => {
                 setPokemonList ( response.data.results );
             } )
@@ -61,7 +61,7 @@ const Pokedex = () => {
                         }}
                     />
                 </div>
-                <div>
+                <div className="list-grid">
                     {isLoading ? (
                         <p>Loading...</p>
                     ) : (
@@ -73,6 +73,9 @@ const Pokedex = () => {
                             />
                         ) )
                     )}
+                    <div className="lst-pagination">
+
+                    </div>
                 </div>
             </div>
         </div>
