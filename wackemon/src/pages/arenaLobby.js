@@ -16,7 +16,7 @@ const ArenaLobby = () => {
 
     useEffect ( () => {
         setIsLoading ( true );
-        Axios.get ( 'https://pokeapi.co/api/v2/pokemon/?limit=100' )
+        Axios.get ( 'https://pokeapi.co/api/v2/pokemon/?limit=240' )
             .then ( response => {
                 setPokemonList ( response.data.results );
             } )
