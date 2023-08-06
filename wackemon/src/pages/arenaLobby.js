@@ -78,7 +78,7 @@ const ArenaLobby = () => {
                                         <CardArena {...pokemon}
                                                    image={pokemon.sprites?.other?.dream_world?.front_default || 'https://static.wikia.nocookie.net/pokemon-fano/images/6/6f/Poke_Ball.png/revision/latest?cb=20140520015336'}/>
                                         <button
-                                            className="arena-slots_list-item_action btn-warning"
+                                            className="arena-slots_list-item_action btn-danger"
                                             onClick={() => removePokemonFromArena(pokemon)}>
                                             Remove {pokemon.name}
                                         </button>
@@ -93,7 +93,7 @@ const ArenaLobby = () => {
                                 <Link className="btn-success" onClick={startBattle}
                                       disabled={selectedPokemon.length < 6} to={"/arena"}>Start Battle</Link>
                             )}
-                            <button className="btn btn-warning" onClick={resetSelection}>Reset Selection</button>
+                            <button className="btn btn-danger" onClick={resetSelection}>Reset Selection</button>
                         </div>
                     </div>
                 )}

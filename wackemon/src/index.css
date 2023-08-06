@@ -1,6 +1,7 @@
 .card {
-  background-color: white;
-  border-radius: 0.25rem;
+  background-color: peachpuff;
+  border-radius: 0.5rem;
+  border: 0.15rem solid black;
   padding: 0.5rem;
   text-align: center;
   transition: all 0.5s ease-in-out;
@@ -9,7 +10,6 @@
 }
 .card:hover {
   transform: scale(1.02);
-  background: lightskyblue;
   box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.2);
   transition: all 0.5s ease-in-out;
 }
@@ -18,8 +18,8 @@
   margin: 0.5rem;
 }
 .card_body_image {
-  background: whitesmoke;
-  border-radius: 0.5rem;
+  background: white;
+  border-radius: 0.25rem;
   padding: 1rem;
   height: 10rem;
   margin-bottom: 1rem;
@@ -49,6 +49,10 @@
   grid-gap: 0.1rem;
   align-items: center;
   place-self: start;
+}
+.card_body_details_types-row h5 {
+  margin: 0;
+  padding: 0;
 }
 .card_body_details_types_type {
   background-color: #f1f1f1;
@@ -112,6 +116,7 @@
 }
 
 .arena-card {
+  background-color: peachpuff;
   display: grid;
   grid-auto-flow: column;
   grid-auto-columns: min-content;
@@ -126,7 +131,7 @@
 }
 .arena-card_side_image {
   place-self: center;
-  background: whitesmoke;
+  background: white;
   border-radius: 0.5rem;
   padding: 1rem;
   height: 5rem;
@@ -176,6 +181,11 @@
   place-self: end center;
 }
 
+.card-link {
+  color: inherit;
+  text-decoration: none;
+}
+
 .arena {
   display: grid;
   grid-auto-flow: row;
@@ -212,9 +222,35 @@
   margin-top: 2rem;
 }
 
-.card-link {
-  color: inherit;
-  text-decoration: none;
+.arena-slots {
+  display: grid;
+  grid-auto-flow: row;
+  grid-gap: 1rem;
+  background: whitesmoke;
+  border: 0.15rem solid black;
+  padding: 2rem;
+  margin: 2rem;
+  border-radius: 0.5rem;
+}
+.arena-slots_header h2 {
+  margin-top: 0;
+}
+.arena-slots_list {
+  display: grid;
+  grid-template-columns: repeat(6, 250px);
+  grid-gap: 1rem;
+  justify-content: center;
+}
+.arena-slots_list-item {
+  display: grid;
+  row-gap: 1rem;
+  align-items: center;
+}
+.arena-slots_list-item_action {
+  width: 100%;
+}
+.arena-slots_actions {
+  margin-top: 1rem;
 }
 
 .header {
@@ -261,36 +297,6 @@
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   grid-gap: 2rem;
   margin: 2rem;
-}
-
-.arena-slots {
-  display: grid;
-  grid-auto-flow: row;
-  grid-gap: 1rem;
-  background: papayawhip;
-  padding: 2rem;
-  margin: 2rem;
-  border-radius: 0.5rem;
-}
-.arena-slots_header h2 {
-  margin-top: 0;
-}
-.arena-slots_list {
-  display: grid;
-  grid-template-columns: repeat(6, 250px);
-  grid-gap: 1rem;
-  justify-content: center;
-}
-.arena-slots_list-item {
-  display: grid;
-  row-gap: 1rem;
-  align-items: center;
-}
-.arena-slots_list-item_action {
-  width: 100%;
-}
-.arena-slots_actions {
-  margin-top: 1rem;
 }
 
 .pokemon {

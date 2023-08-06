@@ -1,0 +1,81 @@
+.arena {
+  display: grid;
+  grid-auto-flow: row;
+
+  &_header {
+    place-self: center;
+    margin-bottom: 2rem;
+  }
+  &_body {
+    display: grid;
+    grid-template-columns: 1fr 200px 1fr;
+    grid-gap: 2rem;
+
+    &_pokemon {
+      display: grid;
+      grid-auto-flow: row;
+      grid-auto-rows: min-content;
+      grid-gap: 1rem;
+
+      &_header {
+        h2 {
+          text-align: center;
+          margin-top: .2rem;
+          margin-bottom: .2rem;
+        }
+      }
+
+      &_list {
+        place-self: center;
+        display: grid;
+        grid-auto-flow: row;
+        grid-auto-rows: min-content;
+        grid-gap: 1rem;
+      }
+    }
+  }
+  &_footer {
+    place-self: center;
+    margin-top: 2rem;
+  }
+}
+
+
+.arena-slots {
+  display: grid;
+  grid-auto-flow: row;
+  grid-gap: 1rem;
+  background: whitesmoke;
+  border: .15rem solid black;
+
+  padding: 2rem;
+  margin: 2rem;
+  border-radius: .5rem;
+
+  &_header {
+    h2 {
+      margin-top: 0;
+    }
+  }
+
+  &_list {
+    display: grid;
+    grid-template-columns: repeat(6, 250px);
+    grid-gap: 1rem;
+    justify-content: center;
+
+    &-item {
+      display: grid;
+      row-gap: 1rem;
+      align-items: center;
+
+      &_action {
+        width: 100%;
+      }
+    }
+  }
+
+  &_actions {
+    margin-top: 1rem;
+  }
+}

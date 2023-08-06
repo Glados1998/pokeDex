@@ -9,43 +9,6 @@
   margin: 2rem;
 }
 
-.arena-slots {
-  display: grid;
-  grid-auto-flow: row;
-  grid-gap: 1rem;
-  background: papayawhip;
-  padding: 2rem;
-  margin: 2rem;
-  border-radius: .5rem;
-
-  &_header {
-    h2 {
-      margin-top: 0;
-    }
-  }
-
-  &_list {
-    display: grid;
-    grid-template-columns: repeat(6, 250px);
-    grid-gap: 1rem;
-    justify-content: center;
-
-    &-item {
-      display: grid;
-      row-gap: 1rem;
-      align-items: center;
-
-      &_action {
-        width: 100%;
-      }
-    }
-  }
-
-  &_actions {
-    margin-top: 1rem;
-  }
-}
-
 .pokemon {
   background-color: white;
   border-radius: 0.25rem;
