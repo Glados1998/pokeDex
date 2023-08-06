@@ -5,8 +5,10 @@ import reportWebVitals from './reportWebVitals';
 import {createBrowserRouter , RouterProvider} from "react-router-dom";
 import Header from "./components/header";
 import Pokedex from "./pages/pokedex";
+import ArenaLobby from "./pages/arenaLobby";
 import Arena from "./pages/arena";
 import PokemonDetail from "./pages/pokemonDetail";
+import {PokemonProvider} from "./context/context";
 
 
 const BrowserRouter = createBrowserRouter ( [
@@ -15,6 +17,7 @@ const BrowserRouter = createBrowserRouter ( [
         children : [
             { path : '/' , element : <Pokedex/> } ,
             { path : '/pokedex/:id' , element : <PokemonDetail/> } ,
+            { path : '/arenaLobby' , element : <ArenaLobby/> } ,
             { path : '/arena' , element : <Arena/> }
         ]
     } ] );
@@ -22,9 +25,9 @@ const BrowserRouter = createBrowserRouter ( [
 
 const root = ReactDOM.createRoot ( document.getElementById ( 'root' ) );
 root.render (
-    <React.StrictMode>
+    <PokemonProvider>
         <RouterProvider router={BrowserRouter}/>
-    </React.StrictMode>
+    </PokemonProvider>
 );
 
 // If you want to start measuring performance in your app, pass a function

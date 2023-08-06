@@ -11,7 +11,7 @@ const Pokedex = () => {
 
     useEffect ( () => {
         setIsLoading ( true );
-        Axios.get ( 'https://pokeapi.co/api/v2/pokemon/?limit=40' )
+        Axios.get ( 'https://pokeapi.co/api/v2/pokemon/?limit=100' )
             .then ( response => {
                 setPokemonList ( response.data.results );
             } )
@@ -65,10 +65,9 @@ const Pokedex = () => {
                     {isLoading ? (
                         <p>Loading...</p>
                     ) : (
-                        filteredPokemon.map ( (pokemon) => (
-                            <Card
+                        filteredPokemon.map ( (pokemon, index) => (
+                            <Card key={index}
                                 {...pokemon}
-                                stats={pokemon.stats}
                                 image={pokemon.sprites.other.dream_world.front_default}
                             />
                         ) )

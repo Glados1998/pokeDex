@@ -14,7 +14,7 @@ const Header = () => {
                             <Link to="/">Pokedex</Link>
                         </li>
                         <li className="header_nav_list_item">
-                            <Link to="/arena">Arena</Link>
+                            <Link to="/arenaLobby">Arena</Link>
                         </li>
                     </ul>
                 </nav>

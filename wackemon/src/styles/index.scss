@@ -5,8 +5,45 @@
 .list-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  grid-gap: 3rem;
+  grid-gap: 2rem;
   margin: 2rem;
+}
+
+.arena-slots {
+  display: grid;
+  grid-auto-flow: row;
+  grid-gap: 1rem;
+  background: papayawhip;
+  padding: 2rem;
+  margin: 2rem;
+  border-radius: .5rem;
+
+  &_header {
+    h2 {
+      margin-top: 0;
+    }
+  }
+
+  &_list {
+    display: grid;
+    grid-template-columns: repeat(6, 250px);
+    grid-gap: 1rem;
+    justify-content: center;
+
+    &-item {
+      display: grid;
+      row-gap: 1rem;
+      align-items: center;
+
+      &_action {
+        width: 100%;
+      }
+    }
+  }
+
+  &_actions {
+    margin-top: 1rem;
+  }
 }
 
 .pokemon {
@@ -222,5 +259,63 @@
         }
       }
     }
+  }
+}
+
+.btn {
+  margin: .25rem;
+  padding: 1rem;
+  border-radius: .5rem;
+  border: none;
+  background: black;
+  color: white;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  text-decoration: none;
+}
+
+.btn-success {
+  @extend .btn;
+  background: green;
+  color: white;
+
+  &:disabled {
+    background: grey;
+    color: white;
+  }
+}
+
+.btn-danger {
+  @extend .btn;
+  background: red;
+  color: white;
+
+  &:disabled {
+    background: grey;
+    color: white;
+  }
+}
+
+.btn-warning {
+  @extend .btn;
+  background: orange;
+  color: white;
+
+  &:disabled {
+    background: grey;
+    color: white;
+  }
+}
+
+.btn-info {
+  @extend .btn;
+  background: cornflowerblue;
+  color: white;
+
+  &:disabled {
+    background: grey;
+    color: white;
   }
 }
